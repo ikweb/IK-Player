@@ -65,6 +65,6 @@ Oynatıcı logo konumunu belirler. Varsayılan: top-right
 #### logo.hide:
 Oynatıcı logo gizliliğini belirler. Varsayılan: false
 #### about.text:
-Oynatıcı hakkında metin tanımlar. Varsayılan: IK Player
+Oynatıcı hakkında metin tanımlar. Varsayılan: null
 #### about.link:
 Oynatıcı hakkında link'i tanımlar. Varsayılan: https://ikplayer.ikweb.org
