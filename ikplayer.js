@@ -1,4 +1,3 @@
-"use strict";
 var ikplayer = function(constructor) {
     var xyz = document.getElementById(constructor);
     var name = "IK Player"
@@ -434,65 +433,54 @@ var ikplayer = function(constructor) {
     });
     displayID.onclick = function() {
         playpauseButton()
-    }
-    ;
+    };
     playID.onclick = function() {
         playButton()
-    }
-    ;
+    };
     pauseID.onclick = function() {
         pauseButton()
-    }
-    ;
+    };
     muteID.onclick = function() {
         if (video.muted) {
             muteButton()
         } else {
             mutedButton()
         }
-    }
-    ;
+    };
     mutedID.onclick = function() {
         if (video.muted) {
             muteButton()
         } else {
             mutedButton()
         }
-    }
-    ;
+    };
     fullscreenID.onclick = function() {
         fullscreenButton()
-    }
-    ;
+    };
     exitfullscreenID.onclick = function() {
         exitfullscreenButton()
-    }
-    ;
+    };
     controlsID.onmouseenter = function() {
         style("controls", {
             "opacity": "1"
         })
-    }
-    ;
+    };
     controlsID.onmousemove = function() {
         style("controls", {
             "opacity": "1"
         })
-    }
-    ;
+    };
     controlsID.onmouseleave = function() {
         setTimeout(function() {
             style("controls", {
                 "opacity": "0"
             })
         }, 3000)
-    }
-    ;
+    };
     progressID.onclick = function(e) {
         var pos = (e.pageX - this.offsetLeft) / this.offsetWidth;
         current(pos * duration())
-    }
-    ;
+    };
     overlayID.oncontextmenu = function(e) {
         if (rightclickID.style.display == "none") {
             style("rightclick", {
@@ -504,30 +492,25 @@ var ikplayer = function(constructor) {
             })
         }
         e.preventDefault()
-    }
-    ;
+    };
     overlayID.onpointerdown = function(a) {
         style("rightclick", {
             "display": "none"
         })
-    }
-    ;
+    };
     copyrightID.onclick = function() {
         window.open(link, "_blank")
-    }
-    ;
+    };
     video.onwaiting = function() {
         style("waiting", {
             "display": "block"
         })
-    }
-    ;
+    };
     video.onplaying = function() {
         style("waiting", {
             "display": "none"
         })
-    }
-    ;
+    };
     video.ontimeupdate = function() {
         if (duration() < 3600) {
             style("current", {
@@ -554,8 +537,7 @@ var ikplayer = function(constructor) {
                 "width": Math.floor((video.buffered.end(blen - 1) / duration()) * 100) + "%"
             })
         }
-    }
-    ;
+    };
     video.onended = function() {
         style("display", {
             "opacity": "1"
@@ -576,8 +558,7 @@ var ikplayer = function(constructor) {
             autoplay(false)
         }
         video.load()
-    }
-    ;
+    };
     var playStyle = function() {
         style("display", {
             "opacity": "0"
@@ -854,8 +835,7 @@ var ikplayer = function(constructor) {
         if (/13|32|37|38|39|40/.test(e.keyCode)) {
             return (e.preventDefault())
         }
-    }
-    ;
+    };
     return {
         setup: function(parameter) {
             video.src = parameter.file;
